@@ -17,7 +17,8 @@ class chromedriver (
 
   $source_file = 'chromedriver_linux32_23.0.1240.0.zip'
   $source_url = "https://chromedriver.googlecode.com/files/${source_file}"
-  $target_file = "${target_directory}/chromedriver"
+  $exec_name = 'chromedriver'
+  $target_file = "${target_directory}/${exec_name}"
   
   archive { $source_file:
     ensure => $ensure,
@@ -25,6 +26,7 @@ class chromedriver (
     digest_string => '988e47718972f650c96dc46f4ea1f5b4ed94f06f',
     digest_type => 'sha1',
     target => $target_directory,
+    root_dir => $exec_name,
     extension => 'zip'
   }
   
