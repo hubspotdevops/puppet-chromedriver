@@ -8,4 +8,4 @@ description 'Download and install chromedriver (WebDriver for Google Chrome)'
 project_page 'https://github.com/laurentmoss/puppet-chromedriver'
 
 ## Add dependencies, if any:
-dependency 'smarchive/archive', '>= 0.1.0'
+dependency 'gini/archive', '>= 0.2.0'
